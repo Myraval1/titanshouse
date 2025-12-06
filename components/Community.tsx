@@ -8,19 +8,16 @@ export const Community: React.FC = () => {
       name: "Carlos M.",
       role: "Miembro hace 6 meses",
       text: "El ambiente es increíble. No es el típico gimnasio donde nadie te habla. Aquí realmente te sientes parte de una familia. Los profes son secos.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop"
     },
     {
       name: "Fernanda R.",
       role: "Miembro hace 1 año",
       text: "Me encanta que no te amarren con contratos. Vine por un mes y me quedé por la buena onda y los resultados. Las clases grupales son fuego.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=100&auto=format&fit=crop"
     },
     {
       name: "Jorge V.",
       role: "Powerlifter",
       text: "El equipamiento está a otro nivel para entrenar pesado en Rengo. Barras olímpicas de calidad y piso apto para peso muerto.",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100&auto=format&fit=crop"
     }
   ];
 
@@ -47,15 +44,16 @@ export const Community: React.FC = () => {
             <h4 className="text-2xl font-bold text-white mb-6 uppercase">Lo que dicen los Titanes</h4>
             <div className="space-y-6">
               {testimonials.map((t, idx) => (
-                <div key={idx} className="flex gap-4 border-b border-gray-800 pb-4 last:border-0 last:pb-0">
-                  <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-titan-gold" />
+                <div key={idx} className="flex flex-col gap-2 border-b border-gray-800 pb-4 last:border-0 last:pb-0">
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <h5 className="font-bold text-white">{t.name}</h5>
-                      <span className="text-xs text-gray-500 bg-black px-2 py-0.5 rounded">{t.role}</span>
-                    </div>
-                    <div className="flex text-titan-gold mb-2">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
+                    <div className="flex items-center justify-between mb-1">
+                      <div className="flex items-center gap-2">
+                        <h5 className="font-bold text-white">{t.name}</h5>
+                        <span className="text-xs text-gray-500 bg-black px-2 py-0.5 rounded">{t.role}</span>
+                      </div>
+                      <div className="flex text-titan-gold">
+                        {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
+                      </div>
                     </div>
                     <p className="text-gray-400 text-sm italic">"{t.text}"</p>
                   </div>

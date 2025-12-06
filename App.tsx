@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Landing } from './components/Landing';
 import { PlanDetail } from './components/PlanDetail';
+import { AllPlans } from './components/AllPlans';
 import { Footer } from './components/Footer';
 import { WhatsAppWidget } from './components/WhatsAppWidget';
 
@@ -14,6 +15,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/planes" element={<AllPlans />} />
             <Route path="/plan/:planId" element={<PlanDetail />} />
           </Routes>
         </main>

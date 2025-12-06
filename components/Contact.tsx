@@ -32,7 +32,7 @@ export const Contact: React.FC = () => {
               ¿Listo para empezar? <span className="text-titan-gold">Contáctanos</span>
             </h2>
             <p className="text-gray-400 mb-10 text-lg">
-              Ven a conocer nuestras instalaciones. La primera visita corre por nuestra cuenta. Estacionamiento privado disponible.
+              Ven a conocer nuestras instalaciones. La primera visita corre por nuestra cuenta. <strong>Estacionamiento privado gratuito</strong> disponible para todos nuestros socios.
             </p>
 
             <div className="space-y-8">

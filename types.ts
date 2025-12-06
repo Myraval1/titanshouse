@@ -9,17 +9,18 @@ export interface Plan {
   id: string;
   name: string;
   price: string;
-  period: string;
+  period?: string;
   features: string[];
   recommended?: boolean;
   description?: string;
+  category: 'asistido' | 'general';
+  subCategory: 'mensual' | 'largo_plazo' | 'am' | 'diario';
 }
 
 export interface Testimonial {
   name: string;
   role: string;
   text: string;
-  image: string;
 }
 
 export interface Service {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from './Button';
-import { ArrowRight, MapPin } from 'lucide-react';
+import { ArrowRight, MapPin, Car } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
@@ -8,23 +8,66 @@ export const Hero: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const today = new Date().getDay(); // 0 = Sun, 1 = Mon, ... 6 = Sat
-    let closingTime = "";
+    const calculateHours = async () => {
+      const now = new Date();
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      const todayString = `${year}-${month}-${day}`;
+      const dayOfWeek = now.getDay(); // 0 = Sun, 1 = Mon, ... 6 = Sat
 
-    // Mon (1) to Fri (5)
-    if (today >= 1 && today <= 5) {
-      closingTime = "23:00";
-    } 
-    // Saturday (6)
-    else if (today === 6) {
-      closingTime = "14:00";
-    } 
-    // Sunday (0)
-    else {
-      closingTime = "14:00";
-    }
+      // 1. Determine standard closing time based on weekday
+      let standardClosingTime = "";
+      if (dayOfWeek >= 1 && dayOfWeek <= 5) {
+        standardClosingTime = "23:00"; // Mon-Fri
+      } else {
+        standardClosingTime = "14:00"; // Sat-Sun
+      }
 
-    setHoursText(`Abierto Hoy hasta las ${closingTime}`);
+      // Initial render with standard time (prevents layout shift/delay)
+      setHoursText(`Abierto Hoy hasta las ${standardClosingTime}`);
+
+      // 2. Check if today is a holiday via API
+      let isHoliday = false;
+
+      try {
+        // Fetch public holidays from Nager.Date API (more reliable/CORS friendly)
+        const response = await fetch(`https://date.nager.at/api/v3/PublicHolidays/${year}/CL`);
+        
+        if (response.ok) {
+          const data = await response.json();
+          // The API returns an array of objects where the date is in 'date' property: "2025-01-01"
+          const holidayDates = data.map((h: any) => h.date);
+          
+          if (holidayDates.includes(todayString)) {
+            isHoliday = true;
+          }
+        } else {
+          throw new Error("Failed to fetch holidays");
+        }
+      } catch (error) {
+        console.warn("Error fetching holidays API, using fallback data for 2025.", error);
+        
+        // Fallback data for 2025 to ensure robustness if API fails
+        const fallbackHolidays2025 = [
+          "2025-01-01", "2025-04-18", "2025-04-19", "2025-05-01", 
+          "2025-05-21", "2025-06-20", "2025-06-29", "2025-07-16", 
+          "2025-08-15", "2025-09-18", "2025-09-19", "2025-10-12", 
+          "2025-10-31", "2025-11-01", "2025-12-08", "2025-12-25"
+        ];
+        
+        if (year === 2025 && fallbackHolidays2025.includes(todayString)) {
+          isHoliday = true;
+        }
+      }
+
+      // 3. If it is a holiday, override the time to 14:00
+      if (isHoliday) {
+        setHoursText(`Abierto Hoy hasta las 14:00`);
+      }
+    };
+
+    calculateHours();
   }, []);
 
   const openWhatsAppFreeTrial = () => {
@@ -81,13 +124,18 @@ export const Hero: React.FC = () => {
             </Button>
           </div>
           
-          <div className="mt-12 flex items-center gap-8 text-sm text-gray-400 font-medium">
+          <div className="mt-12 flex flex-col md:flex-row items-start md:items-center gap-4 text-sm text-gray-400 font-medium">
              <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 <span>{hoursText}</span>
              </div>
-             <div className="hidden sm:block">|</div>
+             <div className="hidden md:block">|</div>
              <div>Rinconada de Malambo 1670-B</div>
+             <div className="hidden md:block">|</div>
+             <div className="flex items-center gap-2 text-titan-gold font-bold">
+                <Car className="h-4 w-4" />
+                <span>Estacionamiento Privado Gratuito</span>
+             </div>
           </div>
         </div>
       </div>

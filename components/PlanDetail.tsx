@@ -17,7 +17,7 @@ export const PlanDetail: React.FC = () => {
     return (
       <div className="min-h-screen bg-black flex flex-col items-center justify-center text-white">
         <h2 className="text-3xl font-heading mb-4">Plan no encontrado</h2>
-        <Button onClick={() => navigate('/')}>Volver al Inicio</Button>
+        <Button onClick={() => navigate('/planes')}>Volver a Planes</Button>
       </div>
     );
   }
@@ -29,13 +29,7 @@ export const PlanDetail: React.FC = () => {
 
   const handleBack = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate('/');
-    setTimeout(() => {
-      const element = document.getElementById('plans');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+    navigate('/planes');
   };
 
   return (
@@ -43,9 +37,9 @@ export const PlanDetail: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb / Back */}
-        <a href="#plans" onClick={handleBack} className="inline-flex items-center text-gray-400 hover:text-titan-gold mb-8 transition-colors cursor-pointer">
+        <a href="#" onClick={handleBack} className="inline-flex items-center text-gray-400 hover:text-titan-gold mb-8 transition-colors cursor-pointer">
           <ArrowLeft className="h-4 w-4 mr-2" />
-          Volver a Planes
+          Volver a Todos los Planes
         </a>
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-sm overflow-hidden shadow-2xl relative">
@@ -57,7 +51,12 @@ export const PlanDetail: React.FC = () => {
                   Recomendado
                 </div>
               )}
-             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-2">{plan.name}</h1>
+             <div className="flex flex-col md:flex-row md:items-center gap-4 mb-2">
+                <h1 className="text-3xl md:text-4xl font-heading font-bold text-white uppercase">{plan.name}</h1>
+                <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider w-fit ${plan.category === 'asistido' ? 'bg-blue-900 text-blue-200' : 'bg-zinc-700 text-zinc-300'}`}>
+                    {plan.category === 'asistido' ? 'Con Entrenador' : 'General'}
+                </span>
+             </div>
              <p className="text-gray-400 text-lg max-w-xl">{plan.description}</p>
           </div>
 

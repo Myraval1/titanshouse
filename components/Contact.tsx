@@ -117,7 +117,7 @@ export const Contact: React.FC = () => {
               <Button type="submit" fullWidth>
                 Contactar por WhatsApp
               </Button>
-              <p className="text-xs text-center text-gray-500 mt-4">
+              <p className="text-xs text-center text-gray-500 mt-3 sm:mt-4">
                 Te responderemos lo antes posible para coordinar tu visita.
               </p>
             </form>
@@ -126,7 +126,7 @@ export const Contact: React.FC = () => {
         </div>
 
         {/* Map Embed */}
-        <div className="mt-16 w-full h-80 rounded-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="mt-12 sm:mt-16 w-full h-60 sm:h-80 rounded-sm overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
            <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.866032158882!2d-70.8655829244309!3d-34.40989264870094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96637b3b3a3a3a3b%3A0x1a2b3c4d5e6f7g8h!2sRinconada%20de%20Malambo%201670%2C%20Rengo%2C%20O'Higgins!5e0!3m2!1ses!2sch!4v1700000000000!5m2!1ses!2sch" 
             width="100%" 

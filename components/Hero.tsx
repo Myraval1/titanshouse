@@ -35,11 +35,11 @@ export const Hero: React.FC = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light max-w-2xl">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 font-light max-w-2xl">
             Únete a la Familia Titans. Entrena sin límites, sin contratos forzosos y con matrícula <span className="text-titan-gold font-bold">TOTALMENTE GRATIS</span>.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <Button onClick={scrollToPlans} className="group flex items-center justify-center gap-2">
               Comienza tu Prueba Gratuita
               <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />

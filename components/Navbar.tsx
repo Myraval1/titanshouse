@@ -94,7 +94,7 @@ export const Navbar: React.FC = () => {
                 e.preventDefault();
                 handleNavClick(item.href);
               }}
-              className="block px-3 py-3 text-white hover:text-titan-gold font-heading uppercase text-lg"
+              className="block px-3 py-2 sm:py-3 text-white hover:text-titan-gold font-heading uppercase text-sm sm:text-lg"
             >
               {item.label}
             </a>

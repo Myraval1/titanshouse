@@ -37,17 +37,17 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/95 backdrop-blur-sm border-b border-white/10 py-2' : 'bg-transparent py-4'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/95 backdrop-blur-sm border-b border-white/10 py-2' : 'bg-transparent py-3 sm:py-4'}`}>
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('#home')}>
-            <div className="bg-titan-gold p-2 rounded-full mr-2">
-              <Dumbbell className="h-6 w-6 text-black" />
+            <div className="bg-titan-gold p-1.5 sm:p-2 rounded-full mr-2">
+              <Dumbbell className="h-4 sm:h-5 md:h-6 w-4 sm:w-5 md:w-6 text-black" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-heading font-bold text-white tracking-widest leading-none">TITANS</span>
-              <span className="text-xs font-heading font-bold text-titan-gold tracking-widest leading-none">HOUSE</span>
+              <span className="text-base sm:text-lg md:text-xl font-heading font-bold text-white tracking-widest leading-none">TITANS</span>
+              <span className="text-[8px] sm:text-xs font-heading font-bold text-titan-gold tracking-widest leading-none">HOUSE</span>
             </div>
           </div>
 

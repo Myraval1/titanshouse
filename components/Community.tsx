@@ -25,39 +25,39 @@ export const Community: React.FC = () => {
   ];
 
   return (
-    <section id="community" className="py-16 sm:py-24 bg-zinc-950 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center mb-16 md:mb-20">
+    <section id="community" className="py-24 bg-zinc-950 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row gap-12 items-center mb-20">
           <div className="w-full md:w-1/2">
-            <h2 className="text-titan-gold font-heading font-bold text-base sm:text-lg md:text-xl tracking-widest uppercase mb-2">Comunidad Titans</h2>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white uppercase mb-4 sm:mb-6">
+            <h2 className="text-titan-gold font-heading font-bold text-xl tracking-widest uppercase mb-2">Comunidad Titans</h2>
+            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white uppercase mb-6">
               Entrena con tu <br/><span className="text-titan-red">Segunda Familia</span>
             </h3>
-            <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
+            <p className="text-gray-400 text-lg leading-relaxed mb-8">
               En Titans House, celebramos cada logro. Desde tu primer día hasta tu récord personal, siempre tendrás a alguien alentándote. Organizamos asados, competencias internas y salidas outdoor.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
-                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-24 sm:h-28 md:h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 1" />
-                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-24 sm:h-28 md:h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 2" />
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-24 sm:h-28 md:h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 3" />
+            <div className="grid grid-cols-3 gap-2">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 1" />
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 2" />
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 3" />
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 bg-zinc-900 p-6 sm:p-8 rounded-sm border-l-4 border-titan-gold">
-            <h4 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 uppercase">Lo que dicen los Titanes</h4>
-            <div className="space-y-4 sm:space-y-6">
+          <div className="w-full md:w-1/2 bg-zinc-900 p-8 rounded-sm border-l-4 border-titan-gold">
+            <h4 className="text-2xl font-bold text-white mb-6 uppercase">Lo que dicen los Titanes</h4>
+            <div className="space-y-6">
               {testimonials.map((t, idx) => (
-                <div key={idx} className="flex gap-3 sm:gap-4 border-b border-gray-800 pb-3 sm:pb-4 last:border-0 last:pb-0">
-                  <img src={t.image} alt={t.name} className="w-10 sm:w-12 h-10 sm:h-12 rounded-full object-cover border border-titan-gold flex-shrink-0" />
-                  <div className="min-w-0">
-                    <div className="flex items-center gap-2 mb-1 flex-wrap">
-                      <h5 className="font-bold text-white text-sm sm:text-base">{t.name}</h5>
-                      <span className="text-[10px] sm:text-xs text-gray-500 bg-black px-2 py-0.5 rounded whitespace-nowrap">{t.role}</span>
+                <div key={idx} className="flex gap-4 border-b border-gray-800 pb-4 last:border-0 last:pb-0">
+                  <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-titan-gold" />
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <h5 className="font-bold text-white">{t.name}</h5>
+                      <span className="text-xs text-gray-500 bg-black px-2 py-0.5 rounded">{t.role}</span>
                     </div>
                     <div className="flex text-titan-gold mb-2">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={10} fill="currentColor" />)}
+                      {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
                     </div>
-                    <p className="text-gray-400 text-xs sm:text-sm italic break-words">"{t.text}"</p>
+                    <p className="text-gray-400 text-sm italic">"{t.text}"</p>
                   </div>
                 </div>
               ))}

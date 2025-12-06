@@ -33,13 +33,13 @@ export const Community: React.FC = () => {
             <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-white uppercase mb-4 sm:mb-6">
               Entrena con tu <br/><span className="text-titan-red">Segunda Familia</span>
             </h3>
-            <p className="text-gray-400 text-lg leading-relaxed mb-8">
+            <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-8">
               En Titans House, celebramos cada logro. Desde tu primer día hasta tu récord personal, siempre tendrás a alguien alentándote. Organizamos asados, competencias internas y salidas outdoor.
             </p>
-            <div className="grid grid-cols-3 gap-2">
-                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 1" />
-                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 2" />
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 3" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+                <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-24 sm:h-28 md:h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 1" />
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-24 sm:h-28 md:h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 2" />
+                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=400&auto=format&fit=crop" className="rounded-lg h-24 sm:h-28 md:h-32 w-full object-cover hover:opacity-80 transition" alt="Gym event 3" />
             </div>
           </div>
           

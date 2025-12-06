@@ -33,7 +33,7 @@ export const Features: React.FC = () => {
                 <span className="scale-75 sm:scale-100 origin-center">{feature.icon}</span>
               </div>
               <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-3 sm:mb-4 uppercase">{feature.title}</h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </div>

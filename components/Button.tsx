@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = '',
   ...props 
 }) => {
-  const baseStyles = "px-6 py-3 font-heading font-bold uppercase tracking-wider transition-all duration-300 transform hover:-translate-y-1 rounded-sm";
+  const baseStyles = "px-4 py-2 sm:px-6 sm:py-3 font-heading font-bold uppercase tracking-wider text-sm sm:text-base transition-all duration-300 transform hover:-translate-y-1 rounded-sm";
   
   const variants = {
     primary: "bg-titan-gold text-black hover:bg-yellow-400 shadow-[0_0_15px_rgba(251,191,36,0.5)]",

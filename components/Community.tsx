@@ -43,21 +43,21 @@ export const Community: React.FC = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 bg-zinc-900 p-8 rounded-sm border-l-4 border-titan-gold">
-            <h4 className="text-2xl font-bold text-white mb-6 uppercase">Lo que dicen los Titanes</h4>
-            <div className="space-y-6">
+          <div className="w-full md:w-1/2 bg-zinc-900 p-6 sm:p-8 rounded-sm border-l-4 border-titan-gold">
+            <h4 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 uppercase">Lo que dicen los Titanes</h4>
+            <div className="space-y-4 sm:space-y-6">
               {testimonials.map((t, idx) => (
-                <div key={idx} className="flex gap-4 border-b border-gray-800 pb-4 last:border-0 last:pb-0">
-                  <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-titan-gold" />
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <h5 className="font-bold text-white">{t.name}</h5>
-                      <span className="text-xs text-gray-500 bg-black px-2 py-0.5 rounded">{t.role}</span>
+                <div key={idx} className="flex gap-3 sm:gap-4 border-b border-gray-800 pb-3 sm:pb-4 last:border-0 last:pb-0">
+                  <img src={t.image} alt={t.name} className="w-10 sm:w-12 h-10 sm:h-12 rounded-full object-cover border border-titan-gold flex-shrink-0" />
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                      <h5 className="font-bold text-white text-sm sm:text-base">{t.name}</h5>
+                      <span className="text-[10px] sm:text-xs text-gray-500 bg-black px-2 py-0.5 rounded whitespace-nowrap">{t.role}</span>
                     </div>
                     <div className="flex text-titan-gold mb-2">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={12} fill="currentColor" />)}
+                      {[...Array(5)].map((_, i) => <Star key={i} size={10} fill="currentColor" />)}
                     </div>
-                    <p className="text-gray-400 text-sm italic">"{t.text}"</p>
+                    <p className="text-gray-400 text-xs sm:text-sm italic break-words">"{t.text}"</p>
                   </div>
                 </div>
               ))}

@@ -48,14 +48,14 @@ export const Services: React.FC = () => {
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
-            <div className="absolute bottom-0 left-0 p-6">
-              <Users className="h-8 w-8 text-titan-gold mb-3" />
-              <h4 className="text-2xl font-heading font-bold text-white mb-2 uppercase">Comunidad</h4>
-              <p className="text-sm text-gray-300">Eventos, competencias y un ambiente familiar.</p>
+            <div className="absolute bottom-0 left-0 p-4 sm:p-6">
+              <Users className="h-6 sm:h-8 w-6 sm:w-8 text-titan-gold mb-2 sm:mb-3" />
+              <h4 className="text-lg sm:text-2xl font-heading font-bold text-white mb-1 sm:mb-2 uppercase">Comunidad</h4>
+              <p className="text-xs sm:text-sm text-gray-300">Eventos, competencias y un ambiente familiar.</p>
             </div>
           </div>
 
-          <div className="group relative overflow-hidden rounded-lg h-80">
+          <div className="group relative overflow-hidden rounded-lg h-60 sm:h-72 md:h-80">
             <img 
               src="https://images.unsplash.com/photo-1576678927484-cc907957088c?q=80&w=1974&auto=format&fit=crop" 
               alt="Alianzas" 

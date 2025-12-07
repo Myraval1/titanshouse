@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Dumbbell } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
 import { Button } from './Button';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -64,9 +64,11 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('#home')}>
-            <div className="bg-titan-gold p-2 rounded-full mr-2">
-              <Dumbbell className="h-6 w-6 text-black" />
-            </div>
+            <img 
+              src="https://github.com/Myraval1/titanshouseassets/raw/0c6ec7f1989e62f1ff71ba6a9cf6310fd529ba4a/nobglogo.png" 
+              alt="Logo Titans House" 
+              className="w-20 mr-2 rounded-full" 
+            />
             <div className="flex flex-col">
               <span className="text-xl font-heading font-bold text-white tracking-widest leading-none">TITANS</span>
               <span className="text-xs font-heading font-bold text-titan-gold tracking-widest leading-none">HOUSE</span>

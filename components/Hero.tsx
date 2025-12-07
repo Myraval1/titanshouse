@@ -3,6 +3,10 @@ import { Button } from './Button';
 import { ArrowRight, MapPin, Car } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+// Asset Constants - Easy to swap out later
+const MOBILE_ASSET_URL = "https://github.com/Myraval1/titanshouseassets/raw/187a94feda946d144898f7f504e16412839a8075/mobileherovideogit.mp4"; // Vertical Gym Video
+const DESKTOP_ASSET_URL = "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"; // Horizontal Gym Image
+
 export const Hero: React.FC = () => {
   const [hoursText, setHoursText] = useState("");
   const navigate = useNavigate();
@@ -81,18 +85,40 @@ export const Hero: React.FC = () => {
 
   return (
     <section id="home" className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-zinc-900 pb-32 md:pb-12">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
+      
+      {/* --- MEDIA ASSETS SEPARATION --- */}
+
+      {/* 1. Mobile Asset (Video) */}
+      <div className="absolute inset-0 z-0 block md:hidden">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline
+          className="w-full h-full object-cover"
+          poster="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600&auto=format&fit=crop" // Fallback poster
+        >
+          <source src={MOBILE_ASSET_URL} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Mobile Overlay: Heavier darkness for readability over video */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+      </div>
+
+      {/* 2. Desktop/Tablet Asset (Image) */}
+      <div className="absolute inset-0 z-0 hidden md:block">
         <img
-          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop"
+          src={DESKTOP_ASSET_URL}
           alt="Gimnasio Titans House en Rengo Chile - Entrenamiento funcional y pesas"
           className="w-full h-full object-cover"
         />
+        {/* Desktop Overlay: Gradient for text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
       </div>
 
-      {/* Content */}
+      {/* --- CONTENT --- */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 md:pt-20">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-titan-gold/20 border border-titan-gold/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm animate-fade-in-up">

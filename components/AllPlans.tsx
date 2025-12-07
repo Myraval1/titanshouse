@@ -155,13 +155,15 @@ const PlanCard: React.FC<{ plan: any, isLongTerm?: boolean }> = ({ plan, isLongT
   return (
     <div className={`relative flex flex-col p-6 rounded-sm bg-zinc-900 border ${plan.recommended ? 'border-titan-gold shadow-[0_0_15px_rgba(251,191,36,0.1)]' : 'border-zinc-800 hover:border-zinc-600'} transition-all duration-300`}>
       {plan.recommended && (
-        <div className="absolute top-0 right-0 bg-titan-gold text-black text-xs font-bold px-2 py-1 uppercase rounded-bl-sm">
+        <div className="absolute top-0 right-0 bg-titan-gold text-black text-xs font-bold px-2 py-1 uppercase rounded-bl-sm z-10">
           Popular
         </div>
       )}
       
       <div className="mb-4">
-        <h3 className="text-xl font-heading font-bold text-white uppercase mb-1">{plan.name}</h3>
+        <h3 className={`text-xl font-heading font-bold text-white uppercase mb-1 ${plan.recommended ? 'pr-10' : ''}`}>
+          {plan.name}
+        </h3>
         <div className="flex items-baseline">
           <span className={`font-bold text-titan-gold ${isLongTerm ? 'text-2xl' : 'text-3xl'}`}>{plan.price}</span>
           <span className="text-gray-500 text-sm ml-1">{plan.period}</span>

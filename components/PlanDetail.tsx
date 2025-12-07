@@ -47,7 +47,7 @@ export const PlanDetail: React.FC = () => {
           {/* Header */}
           <div className="bg-zinc-800 p-8 border-b border-zinc-700 relative overflow-hidden">
              {plan.recommended && (
-                <div className="absolute top-4 right-4 bg-titan-gold text-black px-3 py-1 font-bold uppercase text-xs tracking-wider rounded-sm">
+                <div className="mb-4 md:mb-0 md:absolute md:top-4 md:right-4 inline-block bg-titan-gold text-black px-3 py-1 font-bold uppercase text-xs tracking-wider rounded-sm">
                   Recomendado
                 </div>
               )}
@@ -87,7 +87,7 @@ export const PlanDetail: React.FC = () => {
                 Inscribirme Ahora
               </Button>
               <p className="text-center text-xs text-gray-500">
-                Serás redirigido a WhatsApp para coordinar tu inscripción.
+                Serás redirigido a completar el pago.
               </p>
             </div>
 

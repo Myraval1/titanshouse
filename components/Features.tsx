@@ -21,12 +21,12 @@ export const Features: React.FC = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-titan-dark relative">
+    <section id="features" className="py-20 md:py-40 bg-titan-dark relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Semantic H2 for SEO (Screen reader only to maintain design overlap) */}
         <h2 className="sr-only">Nuestras Ventajas y Diferenciadores</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 -mt-32">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10 -mt-32 md:-mt-20">
           {features.map((feature, index) => (
             <div 
               key={index} 

@@ -37,6 +37,7 @@ export const Services: React.FC = React.memo(() => {
               alt="Entrenamiento de musculación en Gimnasio Titans House Rengo" 
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -52,6 +53,7 @@ export const Services: React.FC = React.memo(() => {
               alt="Servicio de Masoterapia y Recovery muscular en Rengo" 
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -67,6 +69,7 @@ export const Services: React.FC = React.memo(() => {
               alt="Comunidad fitness Gym Titans House, gimnasio sin contratos" 
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">
@@ -82,6 +85,7 @@ export const Services: React.FC = React.memo(() => {
               alt="Beneficios y descuentos en gimnasio económico Rengo" 
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
               loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
             <div className="absolute bottom-0 left-0 p-6">

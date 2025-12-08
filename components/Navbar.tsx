@@ -83,7 +83,9 @@ export const Navbar: React.FC = () => {
               alt="Logo Titans House" 
               className="w-20 mr-2 rounded-full"
               width="80"
-              height="80" 
+              height="80"
+              loading="eager"
+              fetchPriority="high"
             />
             <div className="flex flex-col">
               <span className="text-xl font-heading font-bold text-white tracking-widest leading-none">TITANS</span>

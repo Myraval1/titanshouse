@@ -16,6 +16,8 @@ export const Loader: React.FC = () => {
             src="https://0170a6c2.assets-581.pages.dev/nobglogo.png" 
             alt="Loading Titans House" 
             className="w-32 md:w-40 relative z-10"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
 

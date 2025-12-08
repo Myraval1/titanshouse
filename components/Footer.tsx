@@ -12,6 +12,7 @@ export const Footer: React.FC = React.memo(() => {
             alt="Logo Titans House" 
             className="w-20 mr-2 rounded-full" 
             loading="lazy"
+            decoding="async"
             width="80"
             height="80"
           />

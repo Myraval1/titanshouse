@@ -34,9 +34,9 @@ export const Community: React.FC = React.memo(() => {
               En Titans House, celebramos cada logro. Desde tu primer día hasta tu récord personal, siempre tendrás a alguien alentándote. Organizamos asados, competencias internas y salidas outdoor.
             </p>
             <div className="grid grid-cols-3 gap-2">
-                <img src="https://0170a6c2.assets-581.pages.dev/2dafam1.jpg" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Eventos gimnasio Titans House Rengo" loading="lazy" />
-                <img src="https://0170a6c2.assets-581.pages.dev/2dafam2.jpg" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Clases grupales fitness en Rengo" loading="lazy" />
-                <img src="https://0170a6c2.assets-581.pages.dev/2dafam3.jpg" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Comunidad fitness Rengo gimnasio" loading="lazy" />
+                <img src="https://0170a6c2.assets-581.pages.dev/2dafam1.jpg" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Eventos gimnasio Titans House Rengo" loading="lazy" decoding="async" />
+                <img src="https://0170a6c2.assets-581.pages.dev/2dafam2.jpg" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Clases grupales fitness en Rengo" loading="lazy" decoding="async" />
+                <img src="https://0170a6c2.assets-581.pages.dev/2dafam3.jpg" className="rounded-lg h-32 w-full object-cover hover:opacity-80 transition" alt="Comunidad fitness Rengo gimnasio" loading="lazy" decoding="async" />
             </div>
           </div>
           

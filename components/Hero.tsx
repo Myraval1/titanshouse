@@ -90,13 +90,14 @@ export const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-[85vh] flex items-center bg-black overflow-hidden">
       
-      {/* Mobile Video Background */}
+      {/* Mobile Video Background - Optimized: preload="auto" */}
       <div className="absolute inset-0 z-0 block md:hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
         >
           <source src={MOBILE_ASSET_URL} type="video/mp4" />
@@ -104,13 +105,15 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black via-black/40 to-black/70"></div>
       </div>
 
-      {/* Desktop/Tablet Image Background */}
+      {/* Desktop/Tablet Image Background - Optimized: eager load, high priority */}
       <div className="absolute inset-0 z-0 hidden md:block">
         <img 
           src={DESKTOP_ASSET_URL} 
           alt="Gimnasio Titans House en Rengo Chile - Entrenamiento funcional y pesas" 
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
+          decoding="sync"
         />
         <div className="absolute inset-0 bg-black/70 bg-gradient-to-r from-black via-black/60 to-transparent"></div>
       </div>

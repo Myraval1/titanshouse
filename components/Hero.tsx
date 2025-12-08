@@ -119,7 +119,7 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* --- CONTENT --- */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-28 md:pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-36 md:pt-32">
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-titan-gold/20 border border-titan-gold/30 rounded-full px-4 py-1 mb-6 backdrop-blur-sm animate-fade-in-up">
             <MapPin className="h-4 w-4 text-titan-gold" />
@@ -148,10 +148,10 @@ export const Hero: React.FC = () => {
           </div>
           
           {/* Info Footer */}
-          <div className="mt-8 flex flex-col items-start gap-3 text-sm text-gray-400 font-medium w-full">
+          <div className="mt-12 flex flex-col items-start gap-6 text-sm text-gray-400 font-medium w-full">
              
              {/* Hours and Address Group */}
-             <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-4 w-full md:w-auto">
+             <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-4 w-full md:w-auto">
                 {/* Hours */}
                 <div className="flex items-center gap-3">
                     <div className="w-5 flex justify-center flex-shrink-0">
@@ -172,7 +172,7 @@ export const Hero: React.FC = () => {
              </div>
              
              {/* Parking */}
-             <div className="flex items-center gap-3 text-titan-gold font-bold bg-black/30 md:bg-transparent px-2 py-2 md:p-0 rounded-sm md:rounded-none w-full md:w-auto mt-1 md:mt-0">
+             <div className="flex items-center gap-3 text-titan-gold font-bold bg-black/30 md:bg-transparent px-2 py-2 md:p-0 rounded-sm md:rounded-none w-full md:w-auto mt-2 md:mt-0">
                 <div className="w-5 flex justify-center flex-shrink-0">
                     <Car className="h-4 w-4" />
                 </div>

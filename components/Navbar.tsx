@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || location.pathname !== '/' ? 'bg-black/95 backdrop-blur-sm border-b border-white/10 py-2' : 'bg-transparent py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || location.pathname !== '/' ? 'bg-black/95 backdrop-blur-sm border-b border-white/10 py-1' : 'bg-transparent py-2'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -75,8 +75,8 @@ export const Navbar: React.FC = () => {
             </div>
           </div>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Desktop Nav - Optimized for Tablet (md) to prevent overlap */}
+          <div className="hidden md:flex items-center gap-4 lg:gap-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -85,12 +85,12 @@ export const Navbar: React.FC = () => {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="text-gray-300 hover:text-titan-gold font-medium transition-colors text-sm uppercase tracking-wide"
+                className="text-gray-300 hover:text-titan-gold font-medium transition-colors text-xs lg:text-sm uppercase tracking-wide whitespace-nowrap"
               >
                 {item.label}
               </a>
             ))}
-            <Button variant="primary" className="py-2 px-4 text-sm" onClick={openWhatsApp}>
+            <Button variant="primary" className="py-2 px-3 lg:px-4 text-xs lg:text-sm whitespace-nowrap" onClick={openWhatsApp}>
               Prueba Gratuita
             </Button>
           </div>
@@ -123,11 +123,7 @@ export const Navbar: React.FC = () => {
               {item.label}
             </a>
           ))}
-          <div className="pt-4">
-            <Button fullWidth onClick={openWhatsApp}>
-              Solicitar Prueba Gratuita
-            </Button>
-          </div>
+          {/* Note: Solicitar Prueba Gratuita button removed from mobile menu as per previous request */}
         </div>
       </div>
     </nav>

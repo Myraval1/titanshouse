@@ -16,27 +16,27 @@ export const Pricing: React.FC = () => {
     <section id="plans" className="py-24 bg-titan-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-white font-heading font-bold text-4xl uppercase mb-4">Elige tu Desafío</h2>
+          <h2 className="text-white font-heading font-bold text-4xl uppercase mb-4">Planes</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Sin contratos forzosos. Sin matrícula. Elige entre entrenamiento asistido o libre.
           </p>
         </div>
 
-        {/* Featured Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* Featured Cards - Changed grid-cols-3 to grid-cols-2 on MD to allow more space */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredPlans.map((plan, index) => (
             <div 
               key={index} 
-              className={`relative flex flex-col p-8 rounded-sm transition-all duration-300 ${plan?.recommended ? 'bg-zinc-800 border-2 border-titan-gold transform md:-translate-y-4 shadow-2xl' : 'bg-zinc-900 border border-zinc-700'}`}
+              className={`relative flex flex-col p-8 rounded-sm transition-all duration-300 ${plan?.recommended ? 'bg-zinc-800 border-2 border-titan-gold transform lg:-translate-y-4 shadow-2xl' : 'bg-zinc-900 border border-zinc-700'}`}
             >
               {plan?.recommended && (
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-titan-gold text-black px-4 py-1 font-bold uppercase text-sm tracking-wider rounded-sm">
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-titan-gold text-black px-4 py-1 font-bold uppercase text-sm tracking-wider rounded-sm z-10 w-max">
                   Más Popular
                 </div>
               )}
               
-              <div className="mb-6">
-                <h3 className="text-xl font-heading font-bold text-white uppercase mb-2 h-14 flex items-center">{plan?.name}</h3>
+              <div className="mb-6 mt-2">
+                <h3 className="text-xl font-heading font-bold text-white uppercase mb-2 h-14 flex items-center leading-tight">{plan?.name}</h3>
                 <div className="flex items-baseline">
                   <span className="text-4xl font-bold text-titan-gold">{plan?.price}</span>
                   <span className="text-gray-400 ml-2 text-sm">{plan?.period}</span>

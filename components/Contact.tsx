@@ -3,16 +3,16 @@ import { useForm } from 'react-hook-form';
 import { MapPin, Phone, Mail, Clock, Instagram } from 'lucide-react';
 import { Button } from './Button';
 
-type FormData = {
+type ContactFormInputs = {
   name: string;
   phone: string;
   goal: string;
 };
 
 export const Contact: React.FC = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, formState: { errors } } = useForm<ContactFormInputs>();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = (data: ContactFormInputs) => {
     // Construct WhatsApp message
     const text = `Hola Titans House, mi nombre es ${data.name}. Mi objetivo es ${data.goal} y me gustaría más información. Mi teléfono es ${data.phone}.`;
     window.open(`https://wa.me/56962169412?text=${encodeURIComponent(text)}`, '_blank');

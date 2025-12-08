@@ -47,7 +47,7 @@ export const PlanDetail: React.FC = () => {
           {/* Header */}
           <div className="bg-zinc-800 p-8 border-b border-zinc-700 relative overflow-hidden">
              {plan.recommended && (
-                <div className="mb-4 md:mb-0 md:absolute md:top-4 md:right-4 inline-block bg-titan-gold text-black px-3 py-1 font-bold uppercase text-xs tracking-wider rounded-sm">
+                <div className="mb-4 lg:mb-0 lg:absolute lg:top-4 lg:right-4 inline-block bg-titan-gold text-black px-3 py-1 font-bold uppercase text-xs tracking-wider rounded-sm">
                   Recomendado
                 </div>
               )}

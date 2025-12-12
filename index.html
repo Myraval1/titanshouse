@@ -13,10 +13,25 @@
     <!-- Speed Optimization: Preconnect to Asset CDN -->
     <link rel="preconnect" href="https://0170a6c2.assets-581.pages.dev" crossorigin />
     
-    <!-- Speed Optimization: Preload Critical Assets -->
+    <!-- Speed Optimization: Preload Critical Assets (Above the Fold) -->
     <link rel="preload" as="image" href="https://0170a6c2.assets-581.pages.dev/nobglogo.png" fetchpriority="high" />
+    
+    <!-- Desktop Hero Image (Only preloaded on Desktop) -->
     <link rel="preload" as="image" href="https://0170a6c2.assets-581.pages.dev/gym1.jpg" media="(min-width: 768px)" fetchpriority="high" />
     
+    <!-- Mobile Hero Video (Only preloaded on Mobile) -->
+    <!-- Note: 'as="video"' support varies, but helps browsers that support it -->
+    <link rel="preload" as="video" href="https://0170a6c2.assets-581.pages.dev/mobileherovideogit.mp4" type="video/mp4" media="(max-width: 767px)" fetchpriority="high" />
+    
+    <!-- Speed Optimization: Prefetch Landing Page Images (Below the Fold) -->
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/musculacion.jpg" as="image" />
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/recovery.jpg" as="image" />
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/comunidad.jpg" as="image" />
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/beneficios.jpg" as="image" />
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/2dafam1.jpg" as="image" />
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/2dafam2.jpg" as="image" />
+    <link rel="prefetch" href="https://0170a6c2.assets-581.pages.dev/2dafam3.jpg" as="image" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
